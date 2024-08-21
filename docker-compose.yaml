@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  product_db:
+    image: mysql:8.0
+    platform: linux/amd64
+    container_name: product_db
+    restart: always
+    tty: true
+    environment:
+      - MYSQL_DATABASE=product
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql:/Users/elilima/volumes/mysql
