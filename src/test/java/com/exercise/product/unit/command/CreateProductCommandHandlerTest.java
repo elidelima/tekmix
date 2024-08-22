@@ -12,10 +12,12 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
 
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
@@ -33,6 +35,29 @@ public class CreateProductCommandHandlerTest {
 
     @Mock
     private ProductMapper productMapper;
+
+    @Test
+    public void createProductCommandHandler_emptyCategoryId_throwsCategoryNotFound() {
+        //GIVEN
+        ProductCreationDTO dto = new ProductCreationDTO();
+        dto.setName("Name");
+        dto.setDescription("Description");
+        dto.setPrice(199.99);
+        dto.setCategoryId(1);
+        dto.setManufacturer("Manufacturer");
+
+        Product expectedProduct = new Product();
+        expectedProduct.setId(1);
+
+        when(productMapper.toProduct(dto)).thenReturn(new Product());
+        when(categoryRepository.findById(dto.getCategoryId())).thenReturn(Optional.empty());
+        // WHEN/THEN
+        Exception exception = assertThrows(RuntimeException.class, () -> createProductCommandHandler.execute(dto));
+
+        // THEN
+        assertEquals("no category found for id 1", exception.getMessage());
+    }
+
 
     @Test
     public void createProductCommandHandler_validProduct_returnsSuccess() {

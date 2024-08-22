@@ -28,7 +28,7 @@ public class CreateProductCommandHandler implements Command<ProductCreationDTO, 
     public Long execute(ProductCreationDTO dto) {
         Optional<Category> category = categoryRepository.findById(dto.getCategoryId());
         if (category.isEmpty()) {
-            throw new Error("no category found for id " + dto.getCategoryId());
+            throw new RuntimeException("no category found for id " + dto.getCategoryId());
         }
 
         Product product = productMapper.toProduct(dto);
