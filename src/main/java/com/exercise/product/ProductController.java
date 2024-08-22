@@ -1,10 +1,10 @@
 package com.exercise.product;
 
-import com.exercise.product.category.command.CreateCategoryCommandHandler;
-import com.exercise.product.command.CreateProductCommandHandler;
+import com.exercise.product.unit.category.command.CreateCategoryCommandHandler;
+import com.exercise.product.unit.command.CreateProductCommandHandler;
 import com.exercise.product.model.ProductCreationDTO;
 import com.exercise.product.model.ProductDTO;
-import com.exercise.product.query.GetAllProductsQuery;
+import com.exercise.product.unit.query.GetAllProductsQuery;
 import jakarta.validation.Valid;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;
@@ -42,8 +42,8 @@ public class ProductController {
                     .toList();
             return ResponseEntity.badRequest().body(errorMessages);
         }
-        createProductCommandHandler.execute(dto);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+        Long id = createProductCommandHandler.execute(dto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(id);
     }
 
     @GetMapping()

@@ -1,6 +1,6 @@
 package com.exercise.product.model;
 
-import com.exercise.product.category.Category;
+import com.exercise.product.unit.category.Category;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

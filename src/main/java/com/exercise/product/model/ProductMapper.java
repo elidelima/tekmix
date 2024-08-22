@@ -1,6 +1,6 @@
 package com.exercise.product.model;
 
-import com.exercise.product.category.CategoryMapper;
+import com.exercise.product.unit.category.CategoryMapper;
 import org.springframework.stereotype.Component;
 
 @Component

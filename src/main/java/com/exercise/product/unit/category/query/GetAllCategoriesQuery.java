@@ -1,9 +1,9 @@
-package com.exercise.product.category.query;
+package com.exercise.product.unit.category.query;
 
 import com.exercise.product.Query;
-import com.exercise.product.category.CategoryDTO;
-import com.exercise.product.category.CategoryMapper;
-import com.exercise.product.category.CategoryRepository;
+import com.exercise.product.unit.category.CategoryDTO;
+import com.exercise.product.unit.category.CategoryMapper;
+import com.exercise.product.unit.category.CategoryRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

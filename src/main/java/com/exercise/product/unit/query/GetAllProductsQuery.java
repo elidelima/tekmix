@@ -1,4 +1,4 @@
-package com.exercise.product.query;
+package com.exercise.product.unit.query;
 
 import com.exercise.product.ProductRepository;
 import com.exercise.product.Query;

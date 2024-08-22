@@ -1,4 +1,4 @@
-package com.exercise.product.category;
+package com.exercise.product.unit.category;
 
 import com.exercise.product.model.Product;
 import com.exercise.product.model.ProductCreationDTO;

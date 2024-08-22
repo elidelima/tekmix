@@ -1,4 +1,4 @@
-package com.exercise.product.category;
+package com.exercise.product.unit.category;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
