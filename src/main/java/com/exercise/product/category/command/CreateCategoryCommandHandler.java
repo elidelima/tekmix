@@ -5,7 +5,7 @@ import com.exercise.product.category.*;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CreateCategoryCommandHandler implements Command<CategoryCreationDTO, CategoryDTO> {
+public class CreateCategoryCommandHandler implements Command<CategoryCreationDTO, Integer> {
 
     private final CategoryMapper categoryMapper;
     private final CategoryRepository categoryRepository;
@@ -16,8 +16,8 @@ public class CreateCategoryCommandHandler implements Command<CategoryCreationDTO
     }
 
     @Override
-    public CategoryDTO execute(CategoryCreationDTO dto) {
+    public Integer execute(CategoryCreationDTO dto) {
         Category category = categoryRepository.save(categoryMapper.toCategory(dto));
-        return categoryMapper.toDto(category);
+        return category.getId();
     }
 }
