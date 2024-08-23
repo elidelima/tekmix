@@ -34,7 +34,7 @@ public class CategoryController {
             List<String> errorMessages = bindingResult.getAllErrors().stream().map(DefaultMessageSourceResolvable::getDefaultMessage).toList();
             return ResponseEntity.badRequest().body(errorMessages);
         }
-        createCategoryCommandHandler.execute(dto);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+        Integer newId = createCategoryCommandHandler.execute(dto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(newId);
     }
 }
