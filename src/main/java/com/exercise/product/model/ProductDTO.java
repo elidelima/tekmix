@@ -1,11 +1,7 @@
 package com.exercise.product.model;
 
-import com.exercise.product.unit.category.Category;
-import com.exercise.product.unit.category.CategoryDTO;
-import jakarta.persistence.*;
+import com.exercise.product.category.CategoryDTO;
 import lombok.Data;
-
-import java.sql.Timestamp;
 
 @Data
 public class ProductDTO {

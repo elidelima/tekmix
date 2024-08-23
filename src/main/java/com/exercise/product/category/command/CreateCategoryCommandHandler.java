@@ -1,7 +1,7 @@
-package com.exercise.product.unit.category.command;
+package com.exercise.product.category.command;
 
 import com.exercise.product.Command;
-import com.exercise.product.unit.category.*;
+import com.exercise.product.category.*;
 import org.springframework.stereotype.Service;
 
 @Service

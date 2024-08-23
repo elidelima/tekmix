@@ -1,9 +1,9 @@
-package com.exercise.product.unit.command;
+package com.exercise.product.command;
 
 import com.exercise.product.Command;
 import com.exercise.product.ProductRepository;
-import com.exercise.product.unit.category.Category;
-import com.exercise.product.unit.category.CategoryRepository;
+import com.exercise.product.category.Category;
+import com.exercise.product.category.CategoryRepository;
 import com.exercise.product.model.Product;
 import com.exercise.product.model.ProductCreationDTO;
 import com.exercise.product.model.ProductMapper;

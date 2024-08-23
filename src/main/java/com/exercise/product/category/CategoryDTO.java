@@ -1,4 +1,4 @@
-package com.exercise.product.unit.category;
+package com.exercise.product.category;
 
 import lombok.Data;
 

@@ -1,8 +1,5 @@
-package com.exercise.product.unit.category;
+package com.exercise.product.category;
 
-import com.exercise.product.model.Product;
-import com.exercise.product.model.ProductCreationDTO;
-import com.exercise.product.model.ProductDTO;
 import org.springframework.stereotype.Component;
 
 @Component

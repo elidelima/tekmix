@@ -1,7 +1,7 @@
-package com.exercise.product.unit.category;
+package com.exercise.product.category;
 
-import com.exercise.product.unit.category.command.CreateCategoryCommandHandler;
-import com.exercise.product.unit.category.query.GetAllCategoriesQuery;
+import com.exercise.product.category.query.GetAllCategoriesQuery;
+import com.exercise.product.category.command.CreateCategoryCommandHandler;
 import jakarta.validation.Valid;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;

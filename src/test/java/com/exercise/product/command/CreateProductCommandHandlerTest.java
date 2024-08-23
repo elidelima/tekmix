@@ -1,18 +1,16 @@
-package com.exercise.product.unit.command;
+package com.exercise.product.command;
 
 import com.exercise.product.ProductApplication;
 import com.exercise.product.ProductRepository;
 import com.exercise.product.model.Product;
 import com.exercise.product.model.ProductCreationDTO;
-import com.exercise.product.model.ProductDTO;
 import com.exercise.product.model.ProductMapper;
-import com.exercise.product.unit.category.Category;
-import com.exercise.product.unit.category.CategoryRepository;
+import com.exercise.product.category.Category;
+import com.exercise.product.category.CategoryRepository;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatus;
 
 import java.util.Optional;
 
